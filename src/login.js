@@ -3,7 +3,7 @@ const offcanvasBackdrop = document.querySelector('.offcanvas-backdrop');
 var janelaLogin = new bootstrap.Modal(document.getElementById('loginNegado'));
 var janelacaixaBranca = new bootstrap.Modal(document.getElementById('caixaBranco'));
 var janelaAtencao = new bootstrap.Modal(document.getElementById('atencao'));
-let resposta = Number(document.getElementById('resposta').value);
+let resposta = document.getElementById('resposta');
 
 let userLogin = [
     {
@@ -48,9 +48,10 @@ let arrayEmail = [];
 let arraySenha = [];
 
 userLogin.forEach(prop => {
+    arrayNames.push(prop.username)
+    arrayId.push(prop.id)
     arrayEmail.push(prop.email)
     arraySenha.push(prop.senha)
-    arrayId.push(prop.id)
 });
 
 console.log(arrayEmail);
@@ -100,7 +101,7 @@ function checkPwd(inputPwd, indexEmail) {
     }
 
     // Verificando se a soma do recapture digitado é igual ao resultado
-    else if (resposta == '' || resposta != soma) {
+    else if (resposta.value == '' || resposta.value != soma) {
 
         if (tentativas > 1) {
             tentativas--;
@@ -113,6 +114,19 @@ function checkPwd(inputPwd, indexEmail) {
             document.getElementById('xModal').textContent = `Você errou muitas vezes! Tente novamente mais tarde.`;
             window.location.href = '../recuperar.html';
         }
+    }
+
+    // verifica de se o login feito é do userAdmin.Sim, exibe todos os usuários cadastrados. 
+    else if (indexEmail == 1 && arraySenha.indexOf(inputPwd) == 1) {
+        storageLocal(arrayId[indexEmail], arrayNames[indexEmail], arrayEmail[indexEmail], arraySenha[indexEmail]);
+        alert(`Usuários Cadastrados
+        Ids: ${arrayId}
+        Nomes: ${arrayNames}
+        E-mails: ${arrayEmail}
+        Senhas: ${arraySenha}
+        `)
+        window.location.reload();
+
     } else {
         storageLocal(arrayId[indexEmail], arrayNames[indexEmail], arrayEmail[indexEmail], arraySenha[indexEmail]);
         window.location.reload();
