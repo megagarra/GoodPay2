@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/IconeGP.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <script src="./src/index.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Recuperação de Senha</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-light bg-light fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./app.html">
+                    <img src="./img/goodplayH.png" alt="logo com texto" width="130" height="60">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <a href="./app.html"><img src="./img/GoodPay.png" alt="Logo Principal" width="80" height="80"></a>
+                        <h6 class="offcanvas-title" id="offcanvasNavbarLabel">Menu [GoodPay App]</h6>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <form class="d-flex">
+                            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Pesquisar</button>
+                        </form>
+                        <div class="accordion accordion-flush" id="accordionFlushExample" style="margin-top: 20px;">
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                        Regras de uso do Aplicativo
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">
+                                        <h5>DevTeam <span class="badge bg-success">BCW18</span> </h5>
+                                        <p>
+                                            Este aplicativo não tem conexão com o banco de dados, o desenvolvimento deste aplicativo tem como finalidade o aprendizado de aplicações e interface web. Assim o uso deste aplicativo deve ser pensado como um protótipo não funcional.
+                                        </p>
+                                        <p>
+                                            A aplicação usa elementos de personalização em Bootstrap 5, com Javascript local, os dados utilizados para e adicionados neste interface não são enviados a um serviço.
+                                        </p>
+                                        <p class="badge bg-secondary">
+                                            <a href="https://soulcodeacademy.org/" target="_blank"
+                                                class="text-decoration-none text-light">BCW18:(FullStack)
+                                            </a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingFour">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                                        SoulCode Academy
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">
+                                        <p>
+                                            Tech For Good: 5 pilares que vão transformar o mundo: Educação, Diversidade, Saúde, Longevidade e Sustentabilidade
+                                        </p>
+                                        <p>
+                                            Nossa missão é a formação e o emprego, aplicando os 5 pilares do "Tech For Good". Ser uma escola inclusiva, que, através de nossa metodologia ágil, possa capacitar e educar em tecnologia, gerar oportunidades de emprego para todas as gerações, no início
+                                            ou na ressignificação de carreira, com foco em diversidade e equidade. Numa profissão que fomente o bem-estar físico e mental, permitindo o equilíbrio entre a vida profissional e pessoal, através do trabalho
+                                            remoto, com flexibilidade de horários, além de ser um negócio sustentável e responsável, socialmente.
+                                        </p>
+                                        <p class="badge bg-primary">
+                                            Team SoulCode
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingFive">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseFive" aria-expanded="false"
+                                        aria-controls="flush-collapseFive">
+                                        Ajuda
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseFive" class="accordion-collapse collapse"
+                                    aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body p-0 pt-2">
+                                        <ul class="list-group-flush">
+                                            <li class="list-group-item">gp-error#1011 - Email não encontrado... 
+                                                <button type="button" class="btn btn-outline-success"
+                                                    data-bs-dismiss="offcanvas" onclick="modalErros()">Leia
+                                                    mais...</button>
+                                            </li>
+
+                                            <li class="list-group-item text-dark">gp-error#1022 - Campo Email
+                                                vazio...
+                                                <button type="button" class="btn btn-outline-success"
+                                                    data-bs-dismiss="offcanvas" onclick="modalErros2()">Leia
+                                                    mais...</button>
+                                            </li>
+
+                                            <li class="list-group-item text-dark">ggp-error#1033 - Campos vazios...
+                                                <button type="button" class="btn btn-outline-success"
+                                                    data-bs-dismiss="offcanvas" onclick="modalErros3()">Leia
+                                                    mais...</button>
+                                            </li>
+
+                                            <li class="list-group-item text-dark">gp-error#1044 - Email ou senha
+                                                in...
+                                                <button type="button" class="btn btn-outline-success"
+                                                    data-bs-dismiss="offcanvas" onclick="modalErros4()">Leia
+                                                    mais...</button>
+                                            </li>
+
+                                            <li class="list-group-item text-dark">gp-error#1055 - Email ou usuário
+                                                in...
+                                                <button type="button" class="btn btn-outline-success"
+                                                    data-bs-dismiss="offcanvas" onclick="modalErros5()">Leia
+                                                    mais...</button>
+                                            </li>
+
+                                            <li class="list-group-item text-dark">gp-error#1066 - Usuário não
+                                                encontrado...
+                                                <button type="button" class="btn btn-outline-success"
+                                                    data-bs-dismiss="offcanvas" onclick="modalErros6()">Leia
+                                                    mais...</button>
+                                            </li>
+
+                                            <li class="list-group-item text-dark">gp-error#1077 - Email não
+                                                encontrado...
+                                                <button type="button" class="btn btn-outline-success"
+                                                    data-bs-dismiss="offcanvas" onclick="modalErros7()">Leia
+                                                    mais...</button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container border-form trancaTela" style="width: 2000px; height: 500px;"><!--Estrutural-->
+            <div class="row">
+                <div class="col">
+                    <img src="./img/Reset password-bro.png" alt=""
+                        style="width: 354px; margin-top: 20%; margin-right: 10%;">
+                </div>
+                <div class="col" style="margin-top: 7%;">
+                    <p class="preencha" style="margin-left: 5%;">Preencha os campos para recuperar a senha.</p>
+                    <hr width="398px" style="margin-left: 5%;">
+                    <br>
+                        <div class="container">
+                            <div id="alert" style="width: 398px;margin-left: 0.7%;"></div>
+                            <form action="/action_page.php" class="was-validated">
+                                <div class="mb-3 mt-3" style="text-align: left;">
+                                    <label for="uname" class="form-label">Usuário:</label>
+                                    <input style="width: 398px; height: 46px;" type="text" class="form-control" id="username" placeholder="Digite usuário"
+                                        name="uname" required>
+                                    <div class="valid-feedback">Válido.</div>
+                                    <div class="invalid-feedback">Digite o nome de usuário.</div>
+                                </div>
+                                <div class="form" style="text-align: left;" >
+                                    <label for="email" class="form-label">Email:</label>
+                                    <input style="width: 398px; height: 46px;" type="text" class="form-control" id="emailRecuperacao" placeholder="Digite Email"
+                                        name="tx_email" required>
+                                    <div class="valid-feedback">Válido.</div>
+                                    <div class="invalid-feedback">Digite seu email.</div>
+                                </div>
+                            </form>
+                            <div>
+                                <button type="button" class="btn btn-success" style="padding: 8px 100px; margin-left: 80px;"
+                                onclick="recuperarSenhaModal()">Enviar</button>
+                            </div>
+                        </div>
+                </div>
+                <div class="col">
+                    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel"
+                        style="width: 290px; margin-left: 8%; margin-top: 33%;">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+                                aria-label="Slide 4"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"
+                                aria-label="Slide 5"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5"
+                                aria-label="Slide 6"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="6"
+                                aria-label="Slide 7"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="7"
+                                aria-label="Slide 8"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="8"
+                                aria-label="Slide 9"></button>
+ 
+                        </div>
+                        <div class="carousel-inner" style=" border-radius: 2%;">
+                            <div class="carousel-item active">
+                                <img src="img/1.png" class="d-block w-100" alt="promo1">
+                                <div class="carousel-caption d-none d-md-block">
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/2.png" class="d-block w-100" alt="promo2">
+                                <div class="carousel-caption d-none d-md-block">
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/3.png" class="d-block w-100" alt="promo3">
+                                <div class="carousel-caption d-none d-md-block">
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/4.png" class="d-block w-100" alt="promo4">
+                                <div class="carousel-caption d-none d-md-block">
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/5.png" class="d-block w-100" alt="promo5">
+                                <div class="carousel-caption d-none d-md-block">
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/6.png" class="d-block w-100" alt="promo6">
+                                <div class="carousel-caption d-none d-md-block">
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/7.png" class="d-block w-100" alt="promo7">
+                                <div class="carousel-caption d-none d-md-block">
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/8.png" class="d-block w-100" alt="promo8">
+                                <div class="carousel-caption d-none d-md-block">
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/9.png" class="d-block w-100" alt="promo9">
+                                <div class="carousel-caption d-none d-md-block">
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!--Modal de Comunicação [Elementos não visíveis]-->
+    <div class="modal fade" id="recuperaSenha" tabindex="-1" aria-labelledby="recuperaSenha" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen-sm-down">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="tituloMensagem">Mensagem</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="fechar"></button>
+            </div>
+            <div class="modal-body">
+                <p id="mensagem">
+                    Email enviado com sucesso!!!
+                </p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal" onclick="fecharModalRecupera()" >Fechar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Modal "cardErros "-->
+      <div class="modal fade" id="erros" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="titulo">gp-error#1011 - Email não encontrado...</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="corpo" class="text-center">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Est doloremque neque ea quisquam, quam
+                        sed tenetur. Optio non culpa omnis facere, quibusdam corporis commodi, soluta odio architecto in
+                        error Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est officiis repellendus quasi
+                        facilis aliquam, dignissimos voluptatibus accusantium culpa sunt neque rem id temporibus? Sed ad
+                        placeat at magni quo dolore! Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius,
+                        provident? Nulla enim nam veniam temporibus, ipsam provident illo delectus sunt excepturi vero
+                        maxime voluptas nesciunt iste fuga quaerat consequatur accusantium!
+                    </p>
+                    <div>
+                        <p style="display: inline; margin-right: 20px;">
+                            A Informação foi útil?
+                        </p>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                                value="option1">
+                            <label class="form-check-label" for="inlineRadio1">Sim</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                                value="option2">
+                            <label class="form-check-label" for="inlineRadio2">Não</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                        <a href="recuperar.html">
+                            <button class="btn btn-primary me-md-2" type="button">Voltar</button>
+                            <button class="btn btn-primary me-md-2" type="button">Fechar</button>
+                            <button class="btn btn-primary" type="button">Fechar e Salvar</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="erros2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="titulo2">gp-error#1022 - Campo Email
+                        vazio...</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="corpo2" class="text-center">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Est doloremque neque ea quisquam, quam
+                        sed tenetur. Optio non culpa omnis facere, quibusdam corporis commodi, soluta odio architecto in
+                        error Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est officiis repellendus quasi
+                        facilis aliquam, dignissimos voluptatibus accusantium culpa sunt neque rem id temporibus? Sed ad
+                        placeat at magni quo dolore! Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius,
+                        provident? Nulla enim nam veniam temporibus, ipsam provident illo delectus sunt excepturi vero
+                        maxime voluptas nesciunt iste fuga quaerat consequatur accusantium!
+                    </p>
+                    <div>
+                        <p style="display: inline; margin-right: 20px;">
+                            A Informação foi útil?
+                        </p>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                                value="option1">
+                            <label class="form-check-label" for="inlineRadio1">Sim</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                                value="option2">
+                            <label class="form-check-label" for="inlineRadio2">Não</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                        <a href="recuperar.html">
+                            <button class="btn btn-primary me-md-2" type="button">Voltar</button>
+                            <button class="btn btn-primary me-md-2" type="button">Fechar</button>
+                            <button class="btn btn-primary" type="button">Fechar e Salvar</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="erros3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="titulo3">gp-error#1033 - Campos vazios...</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="corpo3" class="text-center">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Est doloremque neque ea quisquam, quam
+                        sed tenetur. Optio non culpa omnis facere, quibusdam corporis commodi, soluta odio architecto in
+                        error Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est officiis repellendus quasi
+                        facilis aliquam, dignissimos voluptatibus accusantium culpa sunt neque rem id temporibus? Sed ad
+                        placeat at magni quo dolore! Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius,
+                        provident? Nulla enim nam veniam temporibus, ipsam provident illo delectus sunt excepturi vero
+                        maxime voluptas nesciunt iste fuga quaerat consequatur accusantium!
+                    </p>
+                    <div>
+                        <p style="display: inline; margin-right: 20px;">
+                            A Informação foi útil?
+                        </p>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                                value="option1">
+                            <label class="form-check-label" for="inlineRadio1">Sim</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                                value="option2">
+                            <label class="form-check-label" for="inlineRadio2">Não</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                        <a href="recuperar.html">
+                            <button class="btn btn-primary me-md-2" type="button">Voltar</button>
+                            <button class="btn btn-primary me-md-2" type="button">Fechar</button>
+                            <button class="btn btn-primary" type="button">Fechar e Salvar</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="erros4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="titulo4">gp-error#1044 - Email ou senha
+                        incorretos</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="corpo4" class="text-center">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Est doloremque neque ea quisquam, quam
+                        sed tenetur. Optio non culpa omnis facere, quibusdam corporis commodi, soluta odio architecto in
+                        error Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est officiis repellendus quasi
+                        facilis aliquam, dignissimos voluptatibus accusantium culpa sunt neque rem id temporibus? Sed ad
+                        placeat at magni quo dolore! Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius,
+                        provident? Nulla enim nam veniam temporibus, ipsam provident illo delectus sunt excepturi vero
+                        maxime voluptas nesciunt iste fuga quaerat consequatur accusantium!
+                    </p>
+                    <div>
+                        <p style="display: inline; margin-right: 20px;">
+                            A Informação foi útil?
+                        </p>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                                value="option1">
+                            <label class="form-check-label" for="inlineRadio1">Sim</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                                value="option2">
+                            <label class="form-check-label" for="inlineRadio2">Não</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                        <a href="recuperar.html">
+                            <button class="btn btn-primary me-md-2" type="button">Voltar</button>
+                            <button class="btn btn-primary me-md-2" type="button">Fechar</button>
+                            <button class="btn btn-primary" type="button">Fechar e Salvar</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="erros5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="titulo5">gp-error#1055 - Email ou usuário
+                        incorretos</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="corpo5" class="text-center">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Est doloremque neque ea quisquam, quam
+                        sed tenetur. Optio non culpa omnis facere, quibusdam corporis commodi, soluta odio architecto in
+                        error Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est officiis repellendus quasi
+                        facilis aliquam, dignissimos voluptatibus accusantium culpa sunt neque rem id temporibus? Sed ad
+                        placeat at magni quo dolore! Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius,
+                        provident? Nulla enim nam veniam temporibus, ipsam provident illo delectus sunt excepturi vero
+                        maxime voluptas nesciunt iste fuga quaerat consequatur accusantium!
+                    </p>
+                    <div>
+                        <p style="display: inline; margin-right: 20px;">
+                            A Informação foi útil?
+                        </p>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                                value="option1">
+                            <label class="form-check-label" for="inlineRadio1">Sim</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                                value="option2">
+                            <label class="form-check-label" for="inlineRadio2">Não</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                        <a href="recuperar.html">
+                            <button class="btn btn-primary me-md-2" type="button">Voltar</button>
+                            <button class="btn btn-primary me-md-2" type="button">Fechar</button>
+                            <button class="btn btn-primary" type="button">Fechar e Salvar</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="erros6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="titulo6">gp-error#1066 - Usuário não
+                        encontrado...</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="corpo6" class="text-center">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Est doloremque neque ea quisquam, quam
+                        sed tenetur. Optio non culpa omnis facere, quibusdam corporis commodi, soluta odio architecto in
+                        error Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est officiis repellendus quasi
+                        facilis aliquam, dignissimos voluptatibus accusantium culpa sunt neque rem id temporibus? Sed ad
+                        placeat at magni quo dolore! Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius,
+                        provident? Nulla enim nam veniam temporibus, ipsam provident illo delectus sunt excepturi vero
+                        maxime voluptas nesciunt iste fuga quaerat consequatur accusantium!
+                    </p>
+                    <div>
+                        <p style="display: inline; margin-right: 20px;">
+                            A Informação foi útil?
+                        </p>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                                value="option1">
+                            <label class="form-check-label" for="inlineRadio1">Sim</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                                value="option2">
+                            <label class="form-check-label" for="inlineRadio2">Não</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                        <a href="recuperar.html">
+                            <button class="btn btn-primary me-md-2" type="button">Voltar</button>
+                            <button class="btn btn-primary me-md-2" type="button">Fechar</button>
+                            <button class="btn btn-primary" type="button">Fechar e Salvar</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="erros7" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="titulo7">gp-error#1077 - Email não
+                        encontrado...</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="corpo7" class="text-center">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Est doloremque neque ea quisquam, quam
+                        sed tenetur. Optio non culpa omnis facere, quibusdam corporis commodi, soluta odio architecto in
+                        error Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est officiis repellendus quasi
+                        facilis aliquam, dignissimos voluptatibus accusantium culpa sunt neque rem id temporibus? Sed ad
+                        placeat at magni quo dolore! Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius,
+                        provident? Nulla enim nam veniam temporibus, ipsam provident illo delectus sunt excepturi vero
+                        maxime voluptas nesciunt iste fuga quaerat consequatur accusantium!
+                    </p>
+                    <div>
+                        <p style="display: inline; margin-right: 20px;">
+                            A Informação foi útil?
+                        </p>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                                value="option1">
+                            <label class="form-check-label" for="inlineRadio1">Sim</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                                value="option2">
+                            <label class="form-check-label" for="inlineRadio2">Não</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                        <a href="recuperar.html">
+                            <button class="btn btn-primary me-md-2" type="button">Voltar</button>
+                            <button class="btn btn-primary me-md-2" type="button">Fechar</button>
+                            <button class="btn btn-primary" type="button">Fechar e Salvar</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<footer>
+    <script src="./src/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+</footer>
+</html>
